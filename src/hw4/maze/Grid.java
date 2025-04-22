@@ -7,25 +7,45 @@ public class Grid {
 	
 	private ArrayList<Row> rows = new ArrayList<>();
 	
+	/**
+	 * Default constructor
+	 * @param rows2
+	 */
 	public Grid(ArrayList<Row> rows2) {
 		// TODO Auto-generated constructor stub
 		this.rows = rows2;
 	}
 
+	/**
+	 * 
+	 * @return the rows of the grid
+	 */
 	public ArrayList<Row> getRows() {
         return this.rows;
     }
 
+	/**
+	 * Sets the rows of the grid
+	 * @param object
+	 */
 	public void setRows(Object object) {
 		// TODO Auto-generated method stub
 		this.rows = (ArrayList<Row>) object;
 	}
 
+	/**
+	 * Turns the grid into a string
+	 * @return a string representation of the grid
+	 */
 	public String toString() {
 		String strToPrint = "Grid [rows=" + this.rows.toString() + "]";
 		return strToPrint;
 	}
 	
+	/**
+	 * Prints the cells of the grid with player location
+	 * @param player
+	 */
 	public void printCells(Player player) {
 		for (var i = 0; i < rows.size(); i++) { // For each row
 			String rowStr = "";

@@ -9,24 +9,46 @@ public class Player {
 	
 	private Row currentRow = null;
 	private Cell currentCell = null;
-
+	
+	/**
+	 * Default constructor
+	 * @param row
+	 * @param cell
+	 */
 	public Player(Row row, Cell cell) {
 		this.currentRow = row;
 		this.currentCell = cell;
 	}
 
+	/**
+	 * 
+	 * @return the players current row
+	 */
 	public Object getCurrentRow() {
 		return currentRow;
 	}
-
+	
+	/**
+	 * 
+	 * @return the players current cell
+	 */
 	public Object getCurrentCell() {
 		return this.currentCell;
 	}
 	
+	/**
+	 * Converts the players current position to a string
+	 * @return the players position as a string
+	 */
 	public String toString() {
 		return "Player [currentCell=" + this.currentCell + ", currentRow=" + this.currentRow + "]";
 	}
 	
+	/**
+	 * Moves the player left along the grind
+	 * @param grid
+	 * @return true when movement happens and false otherwise
+	 */
 	public Boolean moveLeft(Grid grid) {
 		
 		int currentIndex = currentRow.getCells().indexOf(currentCell);
@@ -50,6 +72,11 @@ public class Player {
 		return false;
 	}
 	
+	/**
+	 * Moves the player right along the grid
+	 * @param grid
+	 * @return true when movement happens and false otherwise
+	 */
 	public Boolean moveRight(Grid grid) {
 		
 		int currentIndex = currentRow.getCells().indexOf(currentCell);
@@ -70,6 +97,11 @@ public class Player {
 		return false;
 	}
 	
+	/**
+	 * Moves the player up along the grid
+	 * @param grid
+	 * @return true when movement happens and false otherwise
+	 */
 	public Boolean moveUp(Grid grid) {
 		
 		int currentIndex = currentRow.getCells().indexOf(currentCell);
@@ -90,6 +122,11 @@ public class Player {
 		return false;
 	}
 	
+	/**
+	 * Moves the player down along the grid
+	 * @param grid
+	 * @return true when movement happens and false otherwise
+	 */
 	public Boolean moveDown(Grid grid) {
 		
 		int currentIndex = currentRow.getCells().indexOf(currentCell);

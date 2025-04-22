@@ -14,19 +14,29 @@ public class Game {
 	
 	public Grid grid = null;
 	
-	/* Default constructor */
+	/**
+	 * Default constructor
+	 * @param grid
+	 */
 	public Game(Grid grid) {
 		this.grid = grid;
 	}
 	
-	/* Constructor given a size of grid */
+	/**
+	 * Constructor given a size of grid
+	 * @param dimension
+	 */
 	public Game(int dimension) {
 		
 		this.grid = createRandomGrid(dimension);
 		
 	}
 	
-	/* Creates a random grid */
+	/**
+	 * Creates a random grid
+	 * @param dimension
+	 * @return a filled grid with dimensions between 3 and 7 otherwise null
+	 */
 	public Grid createRandomGrid(int dimension) {
 		
 		if (dimension < 3 || dimension > 7) {
@@ -75,7 +85,11 @@ public class Game {
 	    return new Grid(rows);
 	}
 	
-	/* Converts a random integer from an integer to a cell component */
+	/**
+	 *  Converts a random integer from an integer to a cell component
+	 * @param i
+	 * @return a CellComponent
+	 */
 	private CellComponents randToWall(int i) {
 		if (i == 0) {
 			return CellComponents.APERTURE;
@@ -86,6 +100,12 @@ public class Game {
 		return CellComponents.WALL;
 	}
 
+	/**
+	 * Moves the player in the specified direction
+	 * @param direction
+	 * @param player
+	 * @return a player movement
+	 */
 	public Object play(Movement direction, Player player) {
 		
 		if (player == null || direction == null) {
@@ -107,14 +127,25 @@ public class Game {
 		return null;
 	}
 
+	/**
+	 * Sets grid
+	 * @param object
+	 */
 	public void setGrid(Object object) {
 		this.grid = (Grid) object;
 	}
 
+	/**
+	 * 
+	 * @return grid
+	 */
 	public Grid getGrid() {
 		return this.grid;
 	}
 	
+	/**
+	 * @return the game as a string
+	 */
 	public String toString() {
 		String strToPrint = "Game [grid=" + this.grid.toString() + "]";
 		return strToPrint;
