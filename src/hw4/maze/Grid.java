@@ -1,6 +1,7 @@
 package hw4.maze;
 
 import java.util.ArrayList;
+import hw4.player.Player;
 
 public class Grid {
 	
@@ -23,6 +24,28 @@ public class Grid {
 	public String toString() {
 		String strToPrint = "Grid [rows=" + this.rows.toString() + "]";
 		return strToPrint;
+	}
+	
+	public void printCells(Player player) {
+		for (var i = 0; i < rows.size(); i++) { // For each row
+			String rowStr = "";
+			for (var z = 0; z < rows.size(); z++) {
+				String cellStr = "S";
+				Cell currentCell = rows.get(i).getCells().get(z);
+				
+				if (currentCell.getLeft() == CellComponents.EXIT) {
+					cellStr = "E";
+				}
+				
+				if (currentCell == player.getCurrentCell()) {
+					cellStr = "A";
+				}
+				
+				rowStr+=cellStr;
+			}
+			System.out.println(rowStr);
+		}
+		System.out.println("");
 	}
 	
 }
