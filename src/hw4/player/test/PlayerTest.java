@@ -23,7 +23,7 @@ class PlayerTest {
 	
 	private Cell currentCell;
 	private Row currentRow;
-
+	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		Cell cell00 = new Cell(CellComponents.EXIT, CellComponents.APERTURE,
