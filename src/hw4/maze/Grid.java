@@ -20,6 +20,9 @@ public class Grid {
 		this.rows = (ArrayList<Row>) object;
 	}
 
-	
+	public String toString() {
+		String strToPrint = "Grid [rows=" + this.rows.toString() + "]";
+		return strToPrint;
+	}
 	
 }

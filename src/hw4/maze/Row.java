@@ -23,8 +23,6 @@ public class Row {
 	
 	public String toString() {
 		String strToPrint = "Row [cells=" + this.row.toString() + "]";
-		System.out.println(this.row.get(0).toString());
-		System.out.println(strToPrint);
 		return strToPrint;
 		
 	}
