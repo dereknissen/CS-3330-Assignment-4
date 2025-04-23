@@ -32,7 +32,16 @@ public class Simulation {
             Movement.UP,
             Movement.LEFT,
             Movement.DOWN,
-            Movement.RIGHT
+            Movement.LEFT,
+            Movement.UP,
+            Movement.LEFT,
+            Movement.DOWN,
+            Movement.LEFT,
+            Movement.UP,
+            Movement.LEFT,
+            Movement.LEFT,
+            Movement.RIGHT,
+            Movement.DOWN
         };
         
         /* Try each move */

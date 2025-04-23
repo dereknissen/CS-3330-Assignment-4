@@ -12,7 +12,6 @@ public class Grid {
 	 * @param rows2
 	 */
 	public Grid(ArrayList<Row> rows2) {
-		// TODO Auto-generated constructor stub
 		this.rows = rows2;
 	}
 
@@ -29,7 +28,6 @@ public class Grid {
 	 * @param object
 	 */
 	public void setRows(Object object) {
-		// TODO Auto-generated method stub
 		this.rows = (ArrayList<Row>) object;
 	}
 
